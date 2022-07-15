@@ -4,7 +4,7 @@ include 'src/FileSystem.php';
 
 
 
-FileSystem::getExtensionFrom('./src');
+FileSystem::getExtensionFrom('./index.php');
 
 FileSystem::makeDirectory('./new-directory');
 
