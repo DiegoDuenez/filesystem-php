@@ -4,11 +4,11 @@ include 'src/FileSystem.php';
 
 
 
-FileSystem::getExtensionFrom('./index.php');
+FileSystem::getExtensionFrom('./src');
 
 FileSystem::makeDirectory('./new-directory');
 
-FileSystem::renameDirectory('./new-directory', 'new-rename2');
+FileSystem::renameDirectory('./new-directory', 'new-rename');
 
 FileSystem::getFilesFrom('./new-rename');
 
