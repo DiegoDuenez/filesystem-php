@@ -3,7 +3,7 @@
 /**
  * FileSystem.php
  * 
- * 
+ * Class for handling folders and files in php
  * 
  * 
  * @link https://github.com/DiegoDuenez/filesystem-php
