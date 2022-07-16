@@ -113,31 +113,22 @@ class FileSystem{
 
     public static function directoryExists($path)
     {
-        if (is_dir($path)) {
-            return true;
-        }
-        else{
-            return false;
-        }
+
+        return (is_dir($path)) ? true : false ;
+
     }
 
     public static function fileExists($path){
-        if (file_exists($path)) {
-            return true;
-        }
-        else{
-            return false;
-        }
+
+        return (file_exists($path)) ? true : false ;
+
     }
 
     public static function makeFile($path)
     {
 
         $f = fopen($path, 'wb');
-        if (!$f) {
-            return false;
-        }
-        return true;
+        return (!$f) ? false : true ;
 
     }
 
