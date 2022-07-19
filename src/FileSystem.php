@@ -29,10 +29,10 @@ class FileSystem{
 
     }
 
-    public static function getExtensionFrom($name)
+    public static function getExtensionFrom($path)
     {
-        $n = strrpos($name, '.');
-        return ($n === false) ? '' : substr($name, $n+1);
+        $extension = pathinfo($path, PATHINFO_EXTENSION);
+        return $extension;
     }
 
     public static function makeDirectory($path)
@@ -141,6 +141,18 @@ class FileSystem{
             return true;
         }
         return false;
+    }
+
+    public static function sizeFile($path){
+        return filesize($path);
+    }
+
+    public static function modifiedDateField($path){
+       return date("F d Y H:i:s.", filemtime($path));
+    }
+
+    public static function typeFile($path){
+        return filetype($path);
     }
 
 
